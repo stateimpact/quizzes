@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+	<title>FCAT</title>
+	<link rel="stylesheet" type="text/css" href="http://www.npr.org/buckets/news/2012/05/natgeo-quiz/jQuizMe.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://www.npr.org/buckets/news/2012/05/natgeo-quiz/jQuizMe.npr.js"></script>
+</head>
+<body>
+	<div id="quiz"></div>
+	<script type="text/javascript">
+	var quiz = {},
+		options = {
+			title: "FCAT Questions",
+			disableDelete: true,
+			random: false,
+			showAnsInfo: true,
+			review: false 
+		};
+
+	quiz.multiList = [
+		{
+			ques: "Which sentence tells the main idea of this article?",
+			ans: "Changes in nature can produce unexpected results in an ecosystem.",
+			ansSel: [
+				"Sea urchins are important to a healthy island ecosystem.",
+				"Hunters in the 1800s changed the island ecosystems forever.",
+				"Sea otters, seals, and sea urchins live in the same ecosystem.",
+				null
+			],
+			ansInfo: ""
+		},
+		{
+			ques: 'With which statement would the author of "What Is an Ecosystem?" most likely agree? People should avoid activities that may harm an ecosystem.',
+			ans: "People should avoid activities that harm an ecosystem.",
+			ansSel: [
+				null,
+				"Ecosystems need change in order to stay strong and healthy.",
+				"Ecosystems can never be repaired once they have been damaged.",
+				"Scientists should be able to predict the effects of changes on ecosystems."
+			]
+		}
+	];
+	jQuery(function($) {
+		$('#quiz').jQuizMe(quiz, options);
+	});
+
+	</script>
+</body>
+</html>
