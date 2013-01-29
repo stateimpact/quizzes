@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+	<title>Personal Property Tax Quiz</title>
+	<link rel="stylesheet" type="text/css" href="http://www.npr.org/buckets/news/2012/05/natgeo-quiz/jQuizMe.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://www.npr.org/buckets/news/2012/05/natgeo-quiz/jQuizMe.npr.js"></script>
+
+	<style>
+		.q-ans { padding-bottom: 120px; height: auto; }
+		.q-result { height: 120px; }
+		.q-check-btn { z-index: 100; bottom: 0; }
+	</style>
+</head>
+<body>
+	<div id="quiz"></div>
+	<script type="text/javascript">
+	var quiz = [
+		{
+			ques: "Dishes",
+			ans:true,
+			ansInfo: "Dishes are one of the many things a restaurant owns that help it do business. They're taxable personal property."
+		},
+		{
+			ques: "Cash register",
+			ans: true,
+			ansInfo: "Like dishes, a cash register is something a diner owns that is undoubtedly a business-related asset. It's taxable personal property."
+		},
+		{
+			ques: "Pencils and pens",
+			ans: false,
+			ansInfo: "Pencils and pens are consumable, meaning that they're used up in the course of business. So, they're not considered assets.  They aren't taxed as business personal property."
+		},
+		{
+			ques: "Frozen french fries",
+			ans: false,
+			ansInfo: "Frozen fries are a diner's merchandise.  The diner sells them to make money.  Merchandise is not taxed as business personal property. "
+		},
+		{
+			ques: "Cloth napkins",
+			ans: true,
+			ansInfo: "Cloth napkins are something the diner will own for a long time, and they help the diner do business. In other words, they're a business asset, and they're taxable personal property."
+		},
+		{
+			ques: "Paper napkins",
+			ans: false,
+			ansInfo: "Like pencils and pens, paper napkins get used up.  They're consumable, and they're not taxed as business personal property. "
+		},
+		{
+			ques: "Restaurant building",
+			ans: false,
+			ansInfo: "Business structures are considered real estate.  They do get taxed, but they're taxed as <a href='http://www.legislature.idaho.gov/idstat/Title55/T55CH1SECT55-101.htm'>real property</a>, not personal property."
+		},
+		{
+			ques: "Walk-in freezer",
+			ans: true,
+			ansInfo: "Even though a walk-in freezer might be built into the diner's building, it's not taxed as real property.  It's taxed as an asset of the business, not as part of the structure that houses the business."
+		},
+		{
+			ques: "Carpet with 1950s-car theme print",
+			ans: true,
+			ansInfo: "If the diner has a 1950s theme, and the carpet is illustrated with fabulous, big-finned Studebaker convertibles, then it adds value to the business, and is considered taxable personal property."
+		},
+		{
+			ques: "Generic carpet",
+			ans: false,
+			ansInfo: "If the diner's carpet is so generic that it would come with any such building, then it's considered part of the structure. It's taxed as real property, not personal property. "
+		},
+		{
+			ques: "Framed picture painted by the owner's husband",
+			ans: true,
+			ansInfo: "D&#233;cor is a business asset, and it's considered taxable personal property."
+		}
+	];
+	var options = {
+			title: "Personal Property Taxes",
+			disableDelete: true,
+			allRandom: false,
+			random: false,
+			showAnsInfo: true,
+			quizType: "tf",
+			review: false 
+	};
+
+
+	
+	jQuery(function($) {
+		$('#quiz').jQuizMe(quiz, options);
+	});
+
+	</script>
+</body>
+</html>
