@@ -49,7 +49,7 @@
 		{
 			ques: "Restaurant building",
 			ans: false,
-			ansInfo: "Business structures are considered real estate.  They do get taxed, but they're taxed as <a href='http://www.legislature.idaho.gov/idstat/Title55/T55CH1SECT55-101.htm'>real property</a>, not personal property."
+			ansInfo: "Business structures are considered real estate.  They do get taxed, but they're taxed as <a target='_top' href='http://www.legislature.idaho.gov/idstat/Title55/T55CH1SECT55-101.htm'>real property</a>, not personal property."
 		},
 		{
 			ques: "Walk-in freezer",
@@ -73,7 +73,7 @@
 		}
 	];
 	var options = {
-			title: "Personal Property Taxes",
+			title: "Are these items subject to Idaho's personal property tax?",
 			disableDelete: true,
 			allRandom: false,
 			random: false,
@@ -82,10 +82,17 @@
 			review: false 
 	};
 
+	var lang = {
+        quiz:{
+                tfFalse: "No",
+                tfTrue: "Yes"
+        }
+}
+
 
 	
 	jQuery(function($) {
-		$('#quiz').jQuizMe(quiz, options);
+		$('#quiz').jQuizMe(quiz, options, lang);
 	});
 
 	</script>
